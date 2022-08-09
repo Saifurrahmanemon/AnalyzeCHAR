@@ -1,6 +1,8 @@
 import NavLogo from "../../assets/NavLogo.svg";
 import { NavbarContainer, NavLink, NavLinks } from "./Navbar.styles";
-const navLinks = [
+
+// will used for testing as well
+export const navLinks = [
    {
       name: "Home",
       link: "/",
@@ -23,7 +25,7 @@ function Navbar() {
    return (
       <NavbarContainer>
          <div className="logo">
-            <img src={NavLogo} alt="" />
+            <img src={NavLogo} alt="navbar-logo" />
          </div>
          <NavLinks className="navlinks">{navItems}</NavLinks>
       </NavbarContainer>
