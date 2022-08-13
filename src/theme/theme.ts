@@ -2,6 +2,7 @@ import { DefaultTheme } from "styled-components";
 
 const myTheme: DefaultTheme = {
    borderRadius: "5px",
+   container: "0 20px",
    colors: {
       main: "#5429FF",
       secondary: "#344054",

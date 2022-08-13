@@ -1,12 +1,12 @@
 import Footer from "./components/Footer/Footer";
-import ImageDetails from "./components/ImageDetails/ImageDetails";
+import ItemDetails from "./Pages/ItemDetails/ItemDetails";
 import Navbar from "./Pages/Navbar/Navbar";
 
 function App() {
    return (
       <div>
          <Navbar />
-         <ImageDetails />
+         <ItemDetails />
          <Footer />
       </div>
    );

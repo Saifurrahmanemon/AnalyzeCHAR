@@ -4,10 +4,10 @@ export const NavbarContainer = styled.div`
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 0 20px;
+   padding: ${(props) => props.theme.container};
    height: 60px;
    background-color: #fff;
-   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
    z-index: 1;
 `;
 
