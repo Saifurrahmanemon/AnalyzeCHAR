@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+
+# not included for privacy
+/backend
+/cypress
+/functions
+DefaultImages.js
+azure-cognitiveservices-computervision.js
