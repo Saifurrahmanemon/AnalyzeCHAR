@@ -19,7 +19,7 @@ export const NavLinks = styled.div`
 `;
 
 export const NavLink = styled.a`
-   color: #636363;
+   color: ${(props) => props.theme.colors.accent};
    font-size: 1.2rem;
    text-decoration: none;
    margin-right: 20px;
