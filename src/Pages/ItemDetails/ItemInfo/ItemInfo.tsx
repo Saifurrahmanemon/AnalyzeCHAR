@@ -1,5 +1,17 @@
-import { ItemInfoContainer } from "./ItemInfo.styles";
+import { ItemInfoContainer, Text, TextContainer } from "./ItemInfo.styles";
 
-export default function ItemInfo() {
-   return <ItemInfoContainer>ItemInfo</ItemInfoContainer>;
+type ItemInfoProps = {
+   item: any;
+};
+
+export default function ItemInfo({ item }: ItemInfoProps) {
+   console.log(item);
+
+   return (
+      <ItemInfoContainer>
+         <TextContainer>
+            <Text>{item?.allText}</Text>
+         </TextContainer>
+      </ItemInfoContainer>
+   );
 }

@@ -21,8 +21,9 @@ export const DropzoneContainer = styled.div`
    flex-direction: column;
    align-items: center;
    justify-content: center;
+
    padding: 20px;
-   height: 200px;
+   height: 100%;
    width: 10rem;
    border-width: 2px;
    border-radius: 2px;

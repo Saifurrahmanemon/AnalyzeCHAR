@@ -19,7 +19,7 @@ function Dropzone() {
    } = useDropzone({
       onDrop,
       accept: {
-         "image/png": [".png", ".jpeg", ".bmp"],
+         "image/png": [".png", ".jpeg", ".bmp", ".jpg"],
          "file/pdf": [".pdf"],
       },
    });
