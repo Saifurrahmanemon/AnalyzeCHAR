@@ -24,9 +24,10 @@ yarn-error.log*
 
 
 
-# not included for privacy
+# not included for privacy and some direces are for testing perpose
 /backend
 /cypress
 /functions
 DefaultImages.js
 azure-cognitiveservices-computervision.js
+Check.jsx
