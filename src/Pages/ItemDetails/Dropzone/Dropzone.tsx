@@ -1,23 +1,27 @@
+import axios from "axios";
 import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { DropzoneContainer, Image } from "./Dropzone.styles";
 
-function Dropzone() {
-   const [paths, setPaths] = useState([]);
-   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-   const onDrop = useCallback(
-      (acceptedFiles: any) => {
-         setPaths(
-            acceptedFiles.map((file: Blob | MediaSource) =>
-               URL.createObjectURL(file)
-            )
-         );
-         // Do something with the files
-         console.log(acceptedFiles);
-      },
-      [setPaths]
-   );
-   console.log(paths);
+const url = `https://api.imgbb.com/1/upload?expiration=600&key=${process.env.REACT_APP_IMGBB_API_KEY}`;
+
+type DropzoneProps = {
+   getSelectedFile: (file: string) => void;
+};
+
+function Dropzone({ getSelectedFile }: DropzoneProps) {
+   const [paths, setPaths] = useState<string[]>([]);
+
+   const onDrop = useCallback(async (acceptedFiles: (string | Blob)[]) => {
+      const formData = new FormData();
+      formData.append("image", acceptedFiles[0]); // has to be named 'image'!
+      const res = await axios.post(url, formData);
+      const imageUrl = res.data.data.url;
+
+      setPaths([imageUrl]);
+      getSelectedFile(imageUrl);
+   }, []);
+
    const {
       getRootProps,
       getInputProps,

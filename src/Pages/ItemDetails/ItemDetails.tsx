@@ -13,6 +13,10 @@ export default function ItemDetails() {
    const [analysis, setAnalysis] = useState<null | string>(null);
    const [processing, setProcessing] = useState<boolean>(false);
 
+   const getSelectedFile = (file: string) => {
+      setFileSelected(file);
+   };
+
    const handleOnClick = () => {
       setProcessing(true);
       setAnalysis(null);
@@ -27,10 +31,12 @@ export default function ItemDetails() {
          .catch((err) => console.log(err));
    };
 
+   console.log(fileSelected);
+
    return (
       <ItemDetailasContainer>
          <FileUploadContainer>
-            <Dropzone />
+            <Dropzone getSelectedFile={getSelectedFile} />
             <Button disabled={processing} onClick={handleOnClick}>
                Analyze
             </Button>
