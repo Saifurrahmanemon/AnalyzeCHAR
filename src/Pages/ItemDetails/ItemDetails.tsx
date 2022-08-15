@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { computerVision } from "../../azure-cognitiveservices-computervision";
 import Dropzone from "./Dropzone/Dropzone";
 import {
    Button,
@@ -17,12 +16,25 @@ export default function ItemDetails() {
       setProcessing(true);
       setAnalysis(null);
 
-      computerVision(fileSelected || null).then((item) => {
-         // reset state/form
-         setAnalysis(item);
-         setFileSelected("");
-         setProcessing(false);
-      });
+      // computerVision(fileSelected || null)
+      //    .then((item) => {
+      //       // reset state/form
+      //       setAnalysis(item);
+      //       setFileSelected("");
+      //       setProcessing(false);
+      //    })
+      //    .catch((err) => console.log(err));
+
+      // using mock data
+
+      fetch("testDetails.json")
+         .then((res) => res.json())
+         .then((data) => {
+            setAnalysis(data);
+            setFileSelected("");
+            setProcessing(false);
+         })
+         .catch((err) => console.log(err));
    };
 
    return (

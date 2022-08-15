@@ -30,4 +30,5 @@ yarn-error.log*
 /functions
 DefaultImages.js
 azure-cognitiveservices-computervision.js
+testDetails.json
 Check.jsx
