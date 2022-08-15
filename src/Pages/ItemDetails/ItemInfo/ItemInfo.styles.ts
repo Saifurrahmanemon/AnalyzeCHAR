@@ -1,20 +1,28 @@
 import styled from "styled-components";
+import { device } from "../../../theme/utils";
 
+const width = `
+   width: 15rem;
+
+   @media ${device.mobileM} {
+      width: 20rem;
+   }
+   @media ${device.tabletS} {
+      width: 30rem;
+}`;
 export const ItemInfoContainer = styled.div`
    display: flex;
    flex-direction: column;
    align-items: center;
-
    height: 25rem;
-   width: 30rem;
    gap: 10px;
    background-color: ${(props) => props.theme.colors.white};
    margin-top: 20px;
    padding: 10px;
    border-radius: ${(props) => props.theme.borderRadius};
-
    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
       rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+   ${width}
 `;
 
 export const TextContainer = styled.div`
@@ -45,7 +53,7 @@ export const CategoriesContainer = styled.div`
    justify-content: space-between;
    align-items: center;
    overflow-x: scroll;
-   width: 30rem;
+   ${width}
 `;
 
 export const TagContainer = styled.div`

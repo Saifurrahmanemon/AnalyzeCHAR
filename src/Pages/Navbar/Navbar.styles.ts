@@ -7,7 +7,7 @@ export const NavbarContainer = styled.div`
    padding: ${(props) => props.theme.container};
    height: 60px;
    background-color: #fff;
-   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   box-shadow: 0 2px 4px -2px rgba(99, 99, 99, 0.2);
    z-index: 1;
 `;
 

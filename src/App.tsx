@@ -1,4 +1,3 @@
-import Footer from "./components/Footer/Footer";
 import ItemDetails from "./Pages/ItemDetails/ItemDetails";
 import Navbar from "./Pages/Navbar/Navbar";
 
@@ -7,7 +6,7 @@ function App() {
       <div>
          <Navbar />
          <ItemDetails />
-         <Footer />
+         {/* <Footer /> */}
       </div>
    );
 }

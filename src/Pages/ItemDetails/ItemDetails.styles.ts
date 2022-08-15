@@ -1,14 +1,23 @@
 import styled from "styled-components";
+import { device } from "../../theme/utils";
 
 export const ItemDetailasContainer = styled.div`
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    align-items: center;
    justify-content: space-between;
    gap: 10px;
    padding: ${(props) => props.theme.container};
    margin: 1rem 3rem;
    padding-bottom: 10px;
+
+   @media ${device.laptop} {
+      margin: 1rem auto;
+      max-width: 900px;
+   }
+   @media ${device.tabletL} {
+      flex-direction: row;
+   }
 `;
 
 export const FileUploadContainer = styled.div`

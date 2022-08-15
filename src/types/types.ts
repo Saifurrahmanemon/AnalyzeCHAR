@@ -7,7 +7,6 @@ export interface getDropzoneColorProps {
    isFocused: boolean;
 }
 
-
 export interface DetailsProps {
    URL: string;
    allText: string;
