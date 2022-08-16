@@ -1,21 +1,22 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { ThemeProvider } from "styled-components";
-import App from "./App";
-import "./index.css";
-import reportWebVitals from "./reportWebVitals";
-import { myTheme } from "./theme/theme";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { ThemeProvider } from 'styled-components';
+import App from './App';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
+import { myTheme } from './theme/theme';
 
-const root = ReactDOM.createRoot(
-   document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
+// we use redux toolkit only when needed
 root.render(
    <React.StrictMode>
+      {/* <Provider store={store}> */}
       <ThemeProvider theme={myTheme}>
          <App />
       </ThemeProvider>
-   </React.StrictMode>
+      {/* </Provider> */}
+   </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
