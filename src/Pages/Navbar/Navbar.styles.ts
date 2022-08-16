@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const NavbarContainer = styled.div`
    display: flex;
@@ -19,7 +19,7 @@ export const NavLinks = styled.div`
 `;
 
 export const NavLink = styled.a`
-   color: ${(props) => props.theme.colors.accent};
+   color: ${(props) => props.theme.colors?.accent};
    font-size: 1.2rem;
    text-decoration: none;
    margin-right: 20px;

@@ -1,19 +1,19 @@
-import NavLogo from "../../assets/NavLogo.svg";
-import { NavbarContainer, NavLink, NavLinks } from "./Navbar.styles";
+import NavLogo from '../../assets/NavLogo.svg';
+import { NavbarContainer, NavLink, NavLinks } from './Navbar.styles';
 
 // will used for testing as well
 export const navLinks = [
    {
-      name: "Home",
-      link: "/",
+      name: 'Home',
+      link: '/home',
    },
    {
-      name: "How it works",
-      link: "/",
+      name: 'How it works',
+      link: '/works',
    },
    {
-      name: "About",
-      link: "/",
+      name: 'About',
+      link: '/about',
    },
 ];
 function Navbar() {
@@ -24,10 +24,10 @@ function Navbar() {
    ));
    return (
       <NavbarContainer>
-         <div className="logo">
-            <img src={NavLogo} alt="navbar-logo" />
+         <div className='logo'>
+            <img src={NavLogo} alt='navbar-logo' />
          </div>
-         <NavLinks className="navlinks">{navItems}</NavLinks>
+         <NavLinks className='navlinks'>{navItems}</NavLinks>
       </NavbarContainer>
    );
 }

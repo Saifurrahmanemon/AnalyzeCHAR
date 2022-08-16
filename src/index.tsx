@@ -11,11 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 // we use redux toolkit only when needed
 root.render(
    <React.StrictMode>
-      {/* <Provider store={store}> */}
       <ThemeProvider theme={myTheme}>
          <App />
       </ThemeProvider>
-      {/* </Provider> */}
    </React.StrictMode>,
 );
 

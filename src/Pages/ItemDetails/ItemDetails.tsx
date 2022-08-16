@@ -5,7 +5,7 @@ import Dropzone from './Dropzone/Dropzone';
 import { Button, FileUploadContainer, ItemDetailasContainer } from './ItemDetails.styles';
 import ItemInfo from './ItemInfo/ItemInfo';
 
-export default function ItemDetails() {
+function ItemDetails() {
    const [fileSelected, setFileSelected] = useState<null | string>(null);
    const [analysis, setAnalysis] = useState<null | string>(null);
    const [processing, setProcessing] = useState<boolean>(false);
@@ -50,3 +50,5 @@ export default function ItemDetails() {
       </ItemDetailasContainer>
    );
 }
+
+export default ItemDetails;
