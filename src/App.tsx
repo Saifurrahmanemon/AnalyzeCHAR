@@ -1,5 +1,5 @@
-import ItemDetails from "./Pages/ItemDetails/ItemDetails";
-import Navbar from "./Pages/Navbar/Navbar";
+import ItemDetails from './Pages/ItemDetails/ItemDetails'
+import Navbar from './Pages/Navbar/Navbar'
 
 function App() {
    return (
@@ -8,7 +8,7 @@ function App() {
          <ItemDetails />
          {/* <Footer /> */}
       </div>
-   );
+   )
 }
 
-export default App;
+export default App

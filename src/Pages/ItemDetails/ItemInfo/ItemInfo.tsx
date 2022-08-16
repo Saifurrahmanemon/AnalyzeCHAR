@@ -1,5 +1,7 @@
-import { randomBadgeColor } from "../../../theme/utils";
+import { Loading } from '../../../components/Loading'
+import { randomBadgeColor } from '../../../theme/utils'
 import {
+   AnalyzeText,
    CategoriesContainer,
    Container,
    ItemInfoContainer,
@@ -10,22 +12,21 @@ import {
    Text,
    TextContainer,
    Title,
-} from "./ItemInfo.styles";
+} from './ItemInfo.styles'
 
 type ItemInfoProps = {
-   item: any;
-};
+   item: any
+   processing: boolean
+}
 
-function ItemInfo({ item }: ItemInfoProps) {
+function ItemInfo({ item, processing }: ItemInfoProps) {
    const Adult = (
       <StyledAdultContainer>
-         <SpanAdult>Racy: {item?.adult.isRacyContent ? "Yes" : "No"}</SpanAdult>
-         <SpanAdult>Gory: {item?.adult.isGoryContent ? "Yes" : "No"}</SpanAdult>
-         <SpanAdult>
-            Adult: {item?.adult.isAdultContent ? "Yes" : "No"}
-         </SpanAdult>
+         <SpanAdult>Racy: {item?.adult.isRacyContent ? 'Yes' : 'No'}</SpanAdult>
+         <SpanAdult>Gory: {item?.adult.isGoryContent ? 'Yes' : 'No'}</SpanAdult>
+         <SpanAdult>Adult: {item?.adult.isAdultContent ? 'Yes' : 'No'}</SpanAdult>
       </StyledAdultContainer>
-   );
+   )
 
    const Tags = (
       <Container>
@@ -33,26 +34,32 @@ function ItemInfo({ item }: ItemInfoProps) {
          <CategoriesContainer>
             {item?.tags.map((tag: { name: string; confidence: number }) => {
                // not using confidence i.e percentage for now
-               const colors = randomBadgeColor();
+               const colors = randomBadgeColor()
                return (
                   <TagContainer key={tag.confidence}>
                      <Span colors={colors}> {tag.name} </Span>
                   </TagContainer>
-               );
+               )
             })}
          </CategoriesContainer>
       </Container>
-   );
+   )
 
-   return (
-      <ItemInfoContainer>
+   const Description = processing ? (
+      <Loading />
+   ) : item !== null ? (
+      <>
          <div>{Adult}</div>
          <div>{Tags}</div>
          <TextContainer>
             <Text>{item?.allText}</Text>
          </TextContainer>
-      </ItemInfoContainer>
-   );
+      </>
+   ) : (
+      <AnalyzeText>Please Press Analyze after inserting image</AnalyzeText>
+   )
+
+   return <ItemInfoContainer>{Description}</ItemInfoContainer>
 }
 
-export default ItemInfo;
+export default ItemInfo

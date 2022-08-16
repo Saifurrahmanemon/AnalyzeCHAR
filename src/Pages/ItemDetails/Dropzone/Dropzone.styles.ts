@@ -1,18 +1,18 @@
-import styled from "styled-components";
-import { getDropzoneColorProps } from "../../../types/types";
+import styled from 'styled-components';
+import { getDropzoneColorProps } from '../../../types/types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const getColor = (props: getDropzoneColorProps) => {
    if (props.isDragAccept) {
-      return "#00e676";
+      return '#00e676';
    }
    if (props.isDragReject) {
-      return "#ff1744";
+      return '#ff1744';
    }
    if (props.isFocused) {
-      return "#2196f3";
+      return '#2196f3';
    }
-   return "#eeeee";
+   return '#eeeee';
 };
 
 export const DropzoneContainer = styled.div`
