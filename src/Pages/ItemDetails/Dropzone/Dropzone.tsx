@@ -49,7 +49,7 @@ function Dropzone({ getSelectedFile }: DropzoneProps) {
 
    return (
       <DropzoneContainer {...getRootProps({ isFocused, isDragAccept, isDragReject })}>
-         <input {...getInputProps()} />
+         <input {...getInputProps()} data-testid='dropzone-input' />
          {Elements}
       </DropzoneContainer>
    );

@@ -6,9 +6,13 @@ import Navbar, { navLinks } from '../Navbar';
 test.each(navLinks)('renders %s', (link) => {
    render(MockThemeProvider({ children: <Navbar />, theme: myTheme }));
 
-   const linkDom = screen.getByText(link.name);
+   const linkDom = screen.getAllByText(link.name);
 
-   expect(linkDom).toHaveAttribute('href', link.link);
+   expect(linkDom).toHaveLength(2);
+
+   linkDom.forEach((dom) => {
+      expect(dom.getAttribute('href')).toEqual(link.link);
+   });
 });
 
 test('renders nav logo', () => {

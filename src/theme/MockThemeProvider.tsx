@@ -1,3 +1,4 @@
+import { MemoryRouter } from 'react-router-dom';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 
 export const MockThemeProvider = ({
@@ -6,4 +7,8 @@ export const MockThemeProvider = ({
 }: {
    children: React.ReactNode;
    theme: DefaultTheme;
-}) => <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+}) => (
+   <MemoryRouter>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+   </MemoryRouter>
+);

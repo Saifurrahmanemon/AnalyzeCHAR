@@ -1,13 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
+import { Home } from './Pages/Home';
 import ItemDetails from './Pages/ItemDetails/ItemDetails';
 import Navbar from './Pages/Navbar/Navbar';
 
 function App() {
    return (
-      <div>
+      <>
          <Navbar />
-         <ItemDetails />
-         {/* <Footer /> */}
-      </div>
+         <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/convert' element={<ItemDetails />} />
+         </Routes>
+      </>
    );
 }
 
