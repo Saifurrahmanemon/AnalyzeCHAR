@@ -21,7 +21,7 @@ function Home() {
          <HomeContainer>
             <BannerTextContainer>
                <Title>Welcome ConvertCHAR</Title>
-               <Text>
+               <Text data-testid='home-content'>
                   This is a web application that allows you extract a wide variety of visual
                   features from your images. <br /> It can determine whether an image contains adult
                   content, possible tags for an image and <br /> more amazingly extract printed or
@@ -33,7 +33,7 @@ function Home() {
                </ButtonContainer>
             </BannerTextContainer>
             <div>
-               <Image src={HomeBanner} alt='' />
+               <Image src={HomeBanner} alt='home-banner' />
             </div>
          </HomeContainer>
          <Footer />

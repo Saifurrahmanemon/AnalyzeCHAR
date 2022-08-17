@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import NavLogo from '../../assets/NavLogo.svg';
+import Logo from '../../assets/logo.svg';
 import { Hamburger, MobileNavLinks, NavbarContainer, NavLink, NavLinks } from './Navbar.styles';
 
 // will used for testing as well
@@ -16,6 +16,10 @@ export const navLinks = [
    {
       name: 'About',
       link: '/about',
+   },
+   {
+      name: 'Sign Up',
+      link: '/signup',
    },
 ];
 function Navbar() {
@@ -34,7 +38,7 @@ function Navbar() {
    return (
       <NavbarContainer>
          <Link to={'/'} className='logo'>
-            <img src={NavLogo} alt='navbar-logo' />
+            <img src={Logo} alt='navbar-logo' />
          </Link>
          <div onClick={handleIsOpen}>
             <Hamburger />
