@@ -23,6 +23,13 @@
     ],
     "rules": {
         "no-use-before-define": "off",
+        "camelcase": "error",
+        "spaced-comment": "error",
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "no-duplicate-imports": "error",
         "@typescript-eslint/no-use-before-define": [
             "error"
         ],

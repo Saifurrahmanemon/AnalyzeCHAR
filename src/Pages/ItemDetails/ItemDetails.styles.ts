@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { device } from "../../theme/utils";
+import styled from 'styled-components';
+import { device } from '../../theme/utils';
 
 export const ItemDetailasContainer = styled.div`
    display: flex;
