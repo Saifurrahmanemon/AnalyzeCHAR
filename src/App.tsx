@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import About from './Pages/About/About';
 import RequireAuth from './Pages/Auth/RequireAuth/RequireAuth';
 
 import SignUp from './Pages/Auth/SignUp/SignUp';
@@ -23,6 +24,7 @@ function App() {
                }
             />
             <Route path='/signup' element={<SignUp>Sign Up</SignUp>} />
+            <Route path='/about' element={<About />} />
          </Routes>
       </>
    );
