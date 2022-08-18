@@ -18,6 +18,7 @@ export const NavLinks = styled.div`
    display: none;
    flex-direction: row;
    align-items: center;
+   margin-right: -24vw;
    justify-content: space-between;
    @media ${device.tabletS} {
       display: block;
@@ -71,5 +72,35 @@ export const MobileNavLinks = styled.div<MobileNavLinksProps>`
    }
    @media ${device.tabletS} {
       display: none;
+   }
+`;
+
+interface SignOutButton {
+   signIn: boolean;
+}
+
+export const SignInOutButton = styled.button<SignOutButton>`
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: flex-end;
+   gap: 10px;
+   background-color: ${(props) =>
+      props.signIn ? props.theme.colors?.blue : props.theme.colors?.red};
+   color: ${(props) => props.theme.colors?.white};
+   opacity: 0.9;
+   font-weight: 600;
+   border: none;
+   border-radius: 5px;
+   padding: 8px;
+   cursor: pointer;
+   :hover {
+      background-color: ${(props) => props.theme.colors?.gray2};
+      transition: all 0.3s ease-in-out;
+      color: ${(props) => props.theme.colors?.black};
+   }
+
+   :active {
+      transform: ${(props) => props.theme.transform};
    }
 `;

@@ -23,6 +23,8 @@ const myTheme: DefaultTheme = {
       black: '#000000',
       gray: '#F5F5F5',
       gray2: '#E5E5E5',
+      red: '#FF1E00',
+      blue: '#3120E0',
    },
 };
 

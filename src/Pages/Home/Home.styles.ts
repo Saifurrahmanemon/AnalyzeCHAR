@@ -11,7 +11,7 @@ export const HomeContainer = styled.div`
    padding: 5rem ${(props) => props.theme.container};
    margin: 1rem 3rem;
 
-   padding-bottom: 2rem;
+   padding-bottom: 3rem;
 
    @media ${device.laptop} {
       margin: 1rem auto;
