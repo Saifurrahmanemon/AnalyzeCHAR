@@ -104,3 +104,22 @@ export const SignInOutButton = styled.button<SignOutButton>`
       transform: ${(props) => props.theme.transform};
    }
 `;
+
+export const StyledBeta = styled.span`
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1rem;
+   font-weight: 500;
+   color: ${(props) => props.theme.colors?.accent};
+   padding: 3px 6px;
+   border-radius: 5px;
+   background-color: rgba(24, 99, 255, 0.2);
+`;
+
+export const LogoWrapper = styled.div`
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 5px;
+`;

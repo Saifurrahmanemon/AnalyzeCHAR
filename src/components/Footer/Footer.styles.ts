@@ -9,7 +9,6 @@ export const FooterContainer = styled.footer`
    text-align: center;
    margin-top: auto;
    bottom: 0;
-
    width: 100%;
    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
    p {

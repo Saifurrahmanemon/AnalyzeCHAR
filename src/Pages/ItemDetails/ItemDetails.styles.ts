@@ -56,3 +56,8 @@ export const Button = styled.button`
       cursor: not-allowed;
    }
 `;
+
+export const ConvertedText = styled.span`
+   font-weight: ${(props) => props.theme.fontWeight};
+   color: ${(props) => props.theme.colors.accent};
+`;
