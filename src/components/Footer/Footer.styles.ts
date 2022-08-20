@@ -14,5 +14,6 @@ export const FooterContainer = styled.footer`
    p {
       margin-bottom: 0;
       font-size: small;
+      font-weight: 500;
    }
 `;
