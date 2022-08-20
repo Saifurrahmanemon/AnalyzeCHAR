@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+<h1 align="center"> Welcome to <a href=""> AnalyzeCHAR</a> 👋</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+  </a>
+</p>
 
-## Available Scripts
+<br/>
 
-In the project directory, you can run:
+### AnalyzeCHAR is a web application that allows users to extract a wide variety of visual features from desired images. It can determine whether an image contains adult content, possible tags for an image and more amazingly extract printed or handwritten text from images. AnalyzeCHAR uses Azure Computer Vision to analyze images. The app is still in development mode and you are using the Beta version.
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## About The Project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I built(still in development mode) this web application to help people analyze images and extract all sorts information from them.During the development phase, I got more confidence in my ability to build web applications using Typscript, perform automated testing and working with Azure Computer Vision AI API.
 
-### `yarn test`
+In this project I have been exposed to many practical techniques that I wouldn't have learned otherwise. Examples as following but not limited to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-  **Building React app using TypeScript**
+-  **Writting Unit And Intergration Test**
+-  **Working with FormData() and ImageBB Api**
+-  **Professional Git workflow with pull requests**
+-  **Code reviews**
+-  **Continuous integration**
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Main Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+✅ Extract both Handwritten and printed Text from image<br/>
+✅ Generate Tags and Know Image Content type <br/>
+✅ Convert Extracted Text into .txt or .doc file<br/>
+✅ 100% secure and safe with firebase authentication <br/>
+✅ Easy to use<br/>
 
-### `yarn eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Frontend
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-  [React](https://reactjs.org/)
+-  [Rect-testing-library](https://testing-library.com/docs/react-testing-library/intro)
+-  [Jest](https://jestjs.io/)
+-  [Cypress](https://www.cypress.io/)
+-  [redux-toolkit](https://redux-toolkit.js.org/)
+-  [React-Dropzone](https://react-dropzone.js.org/)
+-  [Styled-components](https://styled-components.com/)
+-  [Firebase](https://firebase.google.com/)
+-  [React Router](https://reactrouter.com/)
+-  [Axios](https://axios-http.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Backend
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-  [Express](https://expressjs.com/)
+-  [Dotenv](https://www.npmjs.com/package/dotenv)
+-  [Jsonwebtoken](https://jwt.io/)
+-  [MongoDB](https://www.mongodb.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Plans
+
+---
+
+-  🧪 Write e2e tests
+-  🎞️ make production ready
+
+---
+
+### Contributing Guide
+
+If you want to contribute, improve or fix bugs in this repo, then check out the [Contributing Guide](./CONTRIBUTING.md)
+<br/>

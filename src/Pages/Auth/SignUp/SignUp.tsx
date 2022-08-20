@@ -1,8 +1,10 @@
+import { useEffect } from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import googleIcon from '../../../assets/googleIcon.svg';
 import { Loading } from '../../../components/Loading';
 import auth from '../../../firebase.init';
+import useUserToken from '../../../hooks/useUserToken';
 
 import { GoogleButton, SignUpContainer } from './SignUp.styles';
 
@@ -19,15 +21,20 @@ function SignUp({ children }: SignUpProps) {
    const myState = useLocation().state as CustomizedState;
    const from = myState?.from?.pathname || '/';
 
+   const [token] = useUserToken(user);
+
    const navigate = useNavigate();
 
    const handleGoogleSignIn = () => {
       signInWithGoogle();
    };
 
-   if (user) {
-      navigate(from, { replace: true });
-   }
+   useEffect(() => {
+      if (token) {
+         navigate(from, { replace: true });
+      }
+   }, [token]);
+
    if (loading) {
       console.log(loading);
    }

@@ -7,12 +7,12 @@ function RequireAuth({ children }: { children: JSX.Element }) {
    const [user, loading, error] = useAuthState(auth);
    const location = useLocation();
 
-   if (!user) {
-      return <Navigate to='/signup' state={{ from: location }} replace />;
-   }
-
    if (loading) {
       return <Loading />;
+   }
+
+   if (!user) {
+      return <Navigate to='/signup' state={{ from: location }} replace />;
    }
 
    if (error) {

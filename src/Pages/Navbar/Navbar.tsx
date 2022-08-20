@@ -6,11 +6,13 @@ import Logo from '../../assets/logo.svg';
 import auth from '../../firebase.init';
 import {
    Hamburger,
+   LogoWrapper,
    MobileNavLinks,
    NavbarContainer,
    NavLink,
    NavLinks,
    SignInOutButton,
+   StyledBeta,
 } from './Navbar.styles';
 
 // will used for testing as well
@@ -55,9 +57,12 @@ function Navbar() {
 
    return (
       <NavbarContainer>
-         <Link to={'/'} className='logo'>
-            <img src={Logo} alt='navbar-logo' />
-         </Link>
+         <LogoWrapper>
+            <Link to={'/'} className='logo'>
+               <img src={Logo} alt='navbar-logo' />
+            </Link>
+            <StyledBeta>BETA</StyledBeta>
+         </LogoWrapper>
          <span onClick={handleIsOpen}>
             <Hamburger />
             <MobileNavLinks isOpen={isOpen}>{navItems}</MobileNavLinks>
