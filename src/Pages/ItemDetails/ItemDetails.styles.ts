@@ -57,7 +57,69 @@ export const Button = styled.button`
    }
 `;
 
+export const ConvertedFilesWrapper = styled.div`
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 5px;
+   justify-content: center;
+`;
+
 export const ConvertedText = styled.span`
    font-weight: ${(props) => props.theme.fontWeight};
    color: ${(props) => props.theme.colors.accent};
+`;
+
+export const ConvertedInfoIcon = styled.span`
+   margin-top: 2px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+`;
+
+export const TooltipText = styled.div`
+   margin-top: 2px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+`;
+export const TooltipBox = styled.div`
+   position: absolute;
+   bottom: calc(100% + 10px);
+   left: -20px;
+   visibility: hidden;
+   color: transparent;
+   background-color: transparent;
+   width: 150px;
+   padding: 5px 5px;
+   border-radius: 4px;
+   transition: visibility 0.5s, color 0.5s, background-color 0.5s, width 0.5s,
+      padding 0.5s ease-in-out;
+   &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      left: 20px;
+      bottom: -10px;
+      position: absolute;
+      border: 10px solid transparent;
+      transform: rotate(-45deg);
+      transition: border 0.3s ease-in-out;
+   }
+`;
+export const TooltipCard = styled.div`
+   position: relative;
+   & ${TooltipText}:hover + ${TooltipBox} {
+      visibility: visible;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 250px;
+      margin-left: 5px;
+      padding: 5px 5px;
+      &:before {
+         border-color: transparent transparent rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
+      }
+   }
 `;
