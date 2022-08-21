@@ -33,7 +33,7 @@ function SignUp({ children }: SignUpProps) {
       if (token) {
          navigate(from, { replace: true });
       }
-   }, [token]);
+   }, [token, user]);
 
    if (loading) {
       console.log(loading);
