@@ -4,7 +4,7 @@ function Footer() {
    const year = new Date().getFullYear();
    return (
       <FooterContainer>
-         <p>Copyright © {year}</p>
+         <p>© {year} AnalyzeCHAR. All rights reserved.</p>
       </FooterContainer>
    );
 }

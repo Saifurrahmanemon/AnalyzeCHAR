@@ -66,13 +66,15 @@ export const ButtonContainer = styled.div`
    margin-bottom: 5rem;
 `;
 
-export const SourceCodeButton = styled.button`
+export const SourceCodeButton = styled.a`
    background-color: ${(props) => props.theme.colors.white};
+   text-decoration: none;
    color: ${(props) => props.theme.colors.black};
    border: 1px solid ${(props) => props.theme.colors.black};
    border-radius: ${(props) => props.theme.borderRadius};
    padding: ${(props) => props.theme.padding};
    letter-spacing: 1.3px;
+   font-size: 13px;
    font-weight: ${(props) => props.theme.fontWeight};
    cursor: pointer;
    outline: none;

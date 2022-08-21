@@ -16,6 +16,8 @@ function Home() {
    const handleConvertOnclick = () => {
       navigate('/convert');
    };
+
+   const github = 'https://github.com/Saifurrahmanemon/image-analytics';
    return (
       <>
          <HomeContainer>
@@ -28,7 +30,9 @@ function Home() {
                   handwritten text from images.
                </Text>
                <ButtonContainer>
-                  <SourceCodeButton>Source Code</SourceCodeButton>
+                  <SourceCodeButton href={github} target='_blank'>
+                     Source Code
+                  </SourceCodeButton>
                   <ConvertButton onClick={handleConvertOnclick}>Convert</ConvertButton>
                </ButtonContainer>
             </BannerTextContainer>
