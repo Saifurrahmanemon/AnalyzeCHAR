@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { BsExclamationCircle } from 'react-icons/bs';
 import { useQuery } from 'react-query';
 import { URL } from '../../api/Api';
 import axiosPrivate from '../../api/AxiosPrivate';
@@ -9,9 +10,13 @@ import auth from '../../firebase.init';
 import Dropzone from './Dropzone/Dropzone';
 import {
    Button,
+   ConvertedFilesWrapper,
    ConvertedText,
    FileUploadContainer,
    ItemDetailasContainer,
+   TooltipBox,
+   TooltipCard,
+   TooltipText,
 } from './ItemDetails.styles';
 import ItemInfo from './ItemInfo/ItemInfo';
 
@@ -19,6 +24,7 @@ function ItemDetails() {
    const [fileSelected, setFileSelected] = useState<null | string>(null);
    const [analysis, setAnalysis] = useState<null | string>(null);
    const [processing, setProcessing] = useState(false);
+   const [isHovering, setIsHovering] = useState(false);
    const [fileTitle, setFileTitle] = useState('');
    const [user, loading] = useAuthState(auth);
 
@@ -65,10 +71,24 @@ function ItemDetails() {
 
    const Disabled = processing || fileSelected === null || converted >= 5;
 
+   const convertedFiles = (
+      <ConvertedFilesWrapper>
+         <ConvertedText>Converted Files: {converted || 0}/5</ConvertedText>
+         <TooltipCard>
+            <TooltipText>
+               <BsExclamationCircle />
+            </TooltipText>
+            <TooltipBox>
+               <p>You can only convert 5 files with one account! 😥</p>
+            </TooltipBox>
+         </TooltipCard>
+      </ConvertedFilesWrapper>
+   );
+
    return (
       <ItemDetailasContainer>
          <FileUploadContainer>
-            <ConvertedText>Converted Files: {converted || 0}/5</ConvertedText>
+            {convertedFiles}
             <Dropzone getSelectedFile={getSelectedFile} />
             <Button disabled={Disabled} onClick={handleOnClick}>
                {processing ? <Loading /> : 'Analyze'}
