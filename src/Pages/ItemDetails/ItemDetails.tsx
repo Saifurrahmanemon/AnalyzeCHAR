@@ -24,7 +24,6 @@ function ItemDetails() {
    const [fileSelected, setFileSelected] = useState<null | string>(null);
    const [analysis, setAnalysis] = useState<null | string>(null);
    const [processing, setProcessing] = useState(false);
-   const [isHovering, setIsHovering] = useState(false);
    const [fileTitle, setFileTitle] = useState('');
    const [user, loading] = useAuthState(auth);
 
@@ -53,7 +52,7 @@ function ItemDetails() {
             const converts = {
                value: value,
             };
-            const res = await axiosPrivate.put(`${URL}/converts/${user?.email}`, {
+            await axiosPrivate.put(`${URL}/converts/${user?.email}`, {
                converts,
             });
 

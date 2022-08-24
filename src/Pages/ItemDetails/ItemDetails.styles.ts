@@ -93,6 +93,7 @@ export const TooltipBox = styled.div`
    color: transparent;
    background-color: transparent;
    width: 150px;
+   margin-bottom: 10px;
    padding: 5px 5px;
    border-radius: 4px;
    transition: visibility 0.5s, color 0.5s, background-color 0.5s, width 0.5s,
@@ -116,7 +117,6 @@ export const TooltipCard = styled.div`
       color: #fff;
       background-color: rgba(0, 0, 0, 0.8);
       width: 250px;
-      margin-left: 5px;
       padding: 5px 5px;
       &:before {
          border-color: transparent transparent rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);

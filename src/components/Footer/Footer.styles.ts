@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
    display: flex;
+   position: fixed;
+   height: 50px;
    justify-content: flex-start;
    align-items: flex-start;
    padding: ${(props) => props.theme.container};
