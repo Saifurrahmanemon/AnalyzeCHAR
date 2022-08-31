@@ -13,7 +13,7 @@
 
 # misc
 .DS_Store
-.env.local
+.env
 .env.development.local
 .env.test.local
 .env.production.local
@@ -32,4 +32,3 @@ DefaultImages.js
 azure-cognitiveservices-computervision.js
 testDetails.json
 /.firebase
-.env
