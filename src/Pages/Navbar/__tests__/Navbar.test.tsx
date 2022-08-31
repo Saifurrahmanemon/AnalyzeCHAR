@@ -13,6 +13,7 @@ test.each(navLinks)('renders %s', (link) => {
    linkDom.forEach((dom) => {
       expect(dom.getAttribute('href')).toEqual(link.link);
    });
+   screen.debug();
 });
 
 test('renders nav logo', () => {

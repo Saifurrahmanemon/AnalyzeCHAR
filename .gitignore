@@ -32,3 +32,4 @@ DefaultImages.js
 azure-cognitiveservices-computervision.js
 testDetails.json
 /.firebase
+.env
