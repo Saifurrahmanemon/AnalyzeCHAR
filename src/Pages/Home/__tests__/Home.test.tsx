@@ -6,7 +6,7 @@ import Home from '../Home';
 test('should render Home component', () => {
    render(MockThemeProvider({ children: <Home />, theme: myTheme }));
 
-   const title = screen.getByText('Welcome to ConvertCHAR');
+   const title = screen.getByTestId('home-title');
    const text = screen.queryAllByTestId('home-content');
    const button = screen.getByText('Convert');
    const sourceCodeButton = screen.getByText('Source Code');

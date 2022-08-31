@@ -10,9 +10,7 @@ export const HomeContainer = styled.div`
    gap: 10px;
    padding: 5rem ${(props) => props.theme.container};
    margin: 1rem 3rem;
-
    padding-bottom: 3rem;
-
    @media ${device.laptop} {
       margin: 1rem auto;
       max-width: 900px;
