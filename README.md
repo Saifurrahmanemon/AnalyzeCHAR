@@ -16,7 +16,7 @@
 
 ## About The Project
 
-I built(still in development mode) this web application to help people analyze images and extract all sorts information from them.During the development phase, I got more confidence in my ability to build web applications using Typscript, perform automated testing and working with Azure Computer Vision AI API.
+I built(still in development mode) this web application to help people analyze images and extract all sorts of information from them. During the development phase, I got more confidence in my ability to build web applications using Typescript, perform automated testing and work with Azure Computer Vision AI API.
 
 In this project I have been exposed to many practical techniques that I wouldn't have learned otherwise. Examples as following but not limited to:
 
